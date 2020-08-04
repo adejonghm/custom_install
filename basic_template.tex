@@ -1,0 +1,84 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{float}
+
+%---------------------------------------------------------------------
+% DOCUMENT FORMAT
+%---------------------------------------------------------------------
+\usepackage[margin=2.0cm, includeheadfoot]{geometry}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\setlength{\headheight}{14pt}
+
+
+%---------------------------------------------------------------------
+% HEADER AND FOOTER
+%---------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Title of the work}
+\lfoot{}
+\cfoot{}
+\rfoot{Page. \thepage}
+
+%---------------------------------------------------------------------
+% METADATA
+%---------------------------------------------------------------------
+% \title{\textbf{\large -- }}
+% \author{Name}
+% \today{ }
+
+
+%---------------------------------------------------------------------
+%    DOCUMENT
+%---------------------------------------------------------------------
+\begin{document}
+	
+% \maketitle
+% \newpage
+
+%  ****** COVER PAGE ******  %
+\begingroup
+    \begin{titlepage}
+        \begin{minipage}{\textwidth}
+            \vspace{2cm}
+            \noindent
+            \begin{center}
+%                \includegraphics[angle=0, scale=0.2]{images/EP.png} \\[2\baselineskip]
+                {\fontsize{40}{50}\selectfont Titulo\\[0.5\baselineskip]}
+            \end{center}
+            \vspace{35mm}
+            \begin{flushright}
+                {\Large \textsc{Name}} \\[0.2\baselineskip]
+                {\large ID Number} \\[0.2\baselineskip] 
+                \textsc{another annotation} \\[6.1\baselineskip]
+                \textsc{University} \\[0.2\baselineskip]
+                \today \\[0\baselineskip]
+            \end{flushright}
+        \end{minipage}
+    \end{titlepage}
+\endgroup
+
+
+%  ****** TABLE OF CONTENTS ******  %
+% \cleardoublepage
+% \pagestyle{empty} % No headers
+% \tableofcontents % Print the table of contents itself
+% \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\section*{Name of section}
+
+%  ****** BIBLIOGRAPHY ******  %
+\bibliographystyle{abbrv}
+\bibliography{bibfile}
+
+\end{document}
