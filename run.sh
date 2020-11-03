@@ -8,7 +8,7 @@
 ##
 ##	Contact:
 ##		e-mail: dejongh.cu@gmail.com
-##		telegram: 
+##		telegram: https://t.me/adejonghm
 ##
 ##
 ##	Before running this script, check the latest version of Telegram Desktop

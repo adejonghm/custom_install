@@ -1,5 +1,16 @@
 #!/bin/bash
 
+##
+##	Created by Alejandro de Jongh
+##
+##  Ubuntu 18.04-based script with XFCE desktop environment to install  
+##  and configure the necessary software and packages in an automated way.
+##
+##	Contact:
+##		e-mail: dejongh.cu@gmail.com
+##		telegram: https://t.me/adejonghm
+##
+
 
 ##### Telegram Desktop
 wget -qc https://updates.tdesktop.com/tlinux/tsetup.$TDESKTOP_VERSION.tar.xz
