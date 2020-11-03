@@ -3,4 +3,4 @@
 
 ## How to Use
 
-Clone this repository and then run the `run.sh` script
+Clone this repository and then execute the `run.sh` script
