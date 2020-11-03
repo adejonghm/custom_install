@@ -1,3 +1,6 @@
-# These are my configuration files
 
-All these files are copied to their respective addresses in the `$HOME` folder.
+# Installation script for Xubuntu 18.04
+
+### How to Use
+
+Clone this repository into the `$HOME` directory and then run the `run.sh` script
