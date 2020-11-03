@@ -32,7 +32,7 @@ sudo bash scripts/os_install.sh
 
 
 ###### Python Installation
-pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour
+pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour lxml
 
 
 ###### Configurations
