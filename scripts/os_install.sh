@@ -89,7 +89,7 @@ else
 	add-apt-repository -y ppa:clipgrab-team/ppa
 	
 	##### Add Fish
-	add-apt-repository -y ppa:fish-shell/release-3
+	# add-apt-repository -y ppa:fish-shell/release-3
 	
 	##### Add Flatpak (18.04) [**Comment the next line for later versions of Ubuntu**]
 	add-apt-repository -y ppa:alexlarsson/flatpak
@@ -143,7 +143,7 @@ else
 	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
 
 	##### Install PPAs
-	apt install -y albert brave-browser clipgrab code fish google-chrome-stable handbrake-cli handbrake-gtk libreoffice megasync opera-stable qbittorrent skypeforlinux spotify-client texstudio zeal #postgresql postgresql-client pgadmin4
+	apt install -y albert brave-browser clipgrab code google-chrome-stable handbrake-cli handbrake-gtk libreoffice megasync opera-stable qbittorrent skypeforlinux spotify-client texstudio zeal # fish postgresql postgresql-client pgadmin4
 	
 	##### Flatpak Apps
 	flatpak install flathub org.gimp.GIMP #org.kiwix.desktop
