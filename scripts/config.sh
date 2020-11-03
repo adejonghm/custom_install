@@ -8,8 +8,8 @@ rm -f tsetup.$TDESKTOP_VERSION.tar.xz
 
 
 ##### XFCE Globla Menu
-# xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
-# xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
+xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
+xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 
 
 ##### Advanced cp & mv command configuration (with progress-bar)

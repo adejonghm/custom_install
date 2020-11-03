@@ -23,17 +23,17 @@ export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreut
 
 
 ###### Copying configuration files to HOME
-# mv -v conkyrc .conkyrc
-# mv -v conkyrc .vimrc
-# mv -v wakatime.cfg .wakatime.cfg
+mv -v conkyrc .conkyrc
+mv -v conkyrc .vimrc
+mv -v wakatime.cfg .wakatime.cfg
 
 
 ###### OS Installation
-# sudo bash scripts/os_install.sh
+sudo bash scripts/os_install.sh
 
 
 ###### Python Installation
-# pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour
+pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour
 
 
 ###### Configurations
