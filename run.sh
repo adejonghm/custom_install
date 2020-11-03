@@ -21,12 +21,6 @@ export TDESKTOP_VERSION=2.4.5			# Telegram Desktop version https://desktop.teleg
 export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreutils/?C=M;O=D
 
 
-###### Copying configuration files to HOME
-mv -v conkyrc $HOME/.conkyrc
-mv -v vimrc $HOME/.vimrc
-mv -v wakatime.cfg $HOME/.wakatime.cfg
-
-
 ###### OS Installation
 sudo bash scripts/os_install.sh
 
