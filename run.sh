@@ -22,9 +22,9 @@ export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreut
 
 
 ###### Copying configuration files to HOME
-mv -v conkyrc .conkyrc
-mv -v conkyrc .vimrc
-mv -v wakatime.cfg .wakatime.cfg
+mv -v conkyrc $HOME/.conkyrc
+mv -v vimrc $HOME/.vimrc
+mv -v wakatime.cfg $HOME/.wakatime.cfg
 
 
 ###### OS Installation
