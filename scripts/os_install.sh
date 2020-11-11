@@ -58,10 +58,10 @@ else
 	wget --quiet -O - https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key add -
 	
 	##### Add Google Chrome
-	sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome-stable.list'
-	wget -q -O -  https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+	#sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome-stable.list'
+	#wget -q -O -  https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 
-	##### Add MegaS ync
+	##### Add MegaSync
 	sh -c 'echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/ ./" > /etc/apt/sources.list.d/megasync-$(lsb_release -cs).list'
 	wget --quiet -O - https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/Release.key | apt-key add -
 	
@@ -143,7 +143,7 @@ else
 	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
 
 	##### Install PPAs
-	apt install -y albert brave-browser clipgrab code google-chrome-stable handbrake-cli handbrake-gtk libreoffice megasync opera-stable qbittorrent skypeforlinux spotify-client texstudio zeal # fish postgresql postgresql-client pgadmin4
+	apt install -y albert brave-browser clipgrab code  handbrake-cli handbrake-gtk libreoffice megasync opera-stable qbittorrent skypeforlinux spotify-client texstudio zeal # fish postgresql postgresql-client pgadmin4 google-chrome-stable
 	
 	##### Flatpak Apps
 	flatpak install flathub org.gimp.GIMP #org.kiwix.desktop
