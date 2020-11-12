@@ -78,8 +78,8 @@ else
 	wget --quiet -O - https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add -
 	
 	##### Add Spotify
-	sh -c 'echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify-stable.list'
-	curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+	# sh -c 'echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify-stable.list'
+	# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
 	##### Add VSCode
 	sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode-stable.list'
@@ -90,25 +90,16 @@ else
 	
 	##### Add Fish
 	# add-apt-repository -y ppa:fish-shell/release-3
-	
-	##### Add Flatpak (18.04) [**Comment the next line for later versions of Ubuntu**]
-	add-apt-repository -y ppa:alexlarsson/flatpak
 			
 	##### Add Handbrake
 	add-apt-repository -y ppa:stebbins/handbrake-releases
 	
 	##### Add LibreOffice 7
 	add-apt-repository -y ppa:libreoffice/libreoffice-7-0
-
-	##### Add Papirus Icon
-	add-apt-repository -y ppa:papirus/papirus
 	
 	##### Add qBittorrent
-	add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
+	# add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
 	
-	##### Add TexStudio
-	add-apt-repository -y ppa:sunderme/texstudio
-
 	##### Add Zeal
 	add-apt-repository -y ppa:zeal-developers/ppa
 
@@ -128,25 +119,25 @@ else
 	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
 
 	##### Install App
-	apt install -y blueman gparted filezilla gthumb vlc mpv audacious audacity hardinfo caca-utils highlight atool w3m poppler-utils mediainfo ranger sqlite3 sqlite3-doc sqlitebrowser kid3 pinta tilix xournal calibre inkscape neovim #evince ctags vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y qbittorrent blueman gparted filezilla gthumb vlc mpv audacious audacity hardinfo caca-utils highlight atool w3m poppler-utils mediainfo ranger sqlite3 sqlite3-doc sqlitebrowser kid3 pinta tilix xournal calibre inkscape neovim #evince ctags vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
 
 	##### Install Dev-Tools and Apps
 	apt install -y libapache2-mod-php php$PHP_VERSION php$PHP_VERSION-{cli sqlite pgsql gd} python$PY_VERSION-dev python3-{pip doc} -y
 
 	##### Install LaTeX
-	apt install -y texlive lmodern texlive-{base formats-extra pictures pictures-doc bibtex-extra publishers publishers-doc science science-doc lang-{spanish english portuguese other} font-{utils extra extra-doc recommended recommended-doc} generic-{recommended extra}}
+	apt install -y texstudio texlive lmodern texlive-{base formats-extra pictures pictures-doc bibtex-extra publishers publishers-doc science science-doc lang-{spanish english portuguese other} font-{utils extra extra-doc recommended recommended-doc} generic-{recommended extra}}
 
 	##### Install Eye-Candy
-	apt install -y faenza-icon-theme breeze-cursor-theme papirus-icon-theme #elementary-icon-theme
+	apt install -y faenza-icon-theme breeze-cursor-theme #papirus-icon-theme elementary-icon-theme
 
 	##### Install XFCE libraries & Apps
 	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
 
 	##### Install PPAs
-	apt install -y albert brave-browser clipgrab code  handbrake-cli handbrake-gtk libreoffice megasync opera-stable qbittorrent skypeforlinux spotify-client texstudio zeal # fish postgresql postgresql-client pgadmin4 google-chrome-stable
+	apt install -y albert brave-browser clipgrab code handbrake-cli handbrake-gtk libreoffice megasync opera-stable skypeforlinux  zeal #spotify-client fish postgresql postgresql-client pgadmin4 google-chrome-stable
 	
 	##### Flatpak Apps
-	flatpak install flathub org.gimp.GIMP #org.kiwix.desktop
+	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
 fi
 
 
