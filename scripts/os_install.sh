@@ -138,7 +138,7 @@ else
 	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
 fi
 
-testeasdasdasdas
+
 ##* install Python OpenCV from repositories *##
  # sudo apt install python3-opencv libopencv-dev
  # python3 extract_frames.py
