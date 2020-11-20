@@ -62,7 +62,7 @@ else
 	#wget -q -O -  https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 
 	##### Add MegaSync
-	sh -c 'echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/ ./" > /etc/apt/sources.list.d/megasync-$(lsb_release -cs).list'
+	sh -c 'echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/ ./" > /etc/apt/sources.list.d/megasync.list'
 	wget --quiet -O - https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/Release.key | apt-key add -
 	
 	##### Add Opera
@@ -100,12 +100,6 @@ else
 	
 	##### Add LibreOffice 7
 	add-apt-repository -y ppa:libreoffice/libreoffice-7-0
-	
-	##### Add qBittorrent
-	# add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
-	
-	##### Add Zeal
-	add-apt-repository -y ppa:zeal-developers/ppa
 
 
 	# ========= UPGRADE SYSTEM ========= #
