@@ -81,9 +81,13 @@ else
 	# sh -c 'echo "deb http://repository.spotify.com stable non-free" > /etc/apt/sources.list.d/spotify-stable.list'
 	# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
-	##### Add VSCode
-	sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode-stable.list'
-	wget --quiet -O - http://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+	##### Add VSCode-Microsoft
+	# sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode-stable.list'
+	# wget --quiet -O - http://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+
+	##### Add VSCodium
+	sh -c 'echo "deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/" > /etc/apt/sources.list.d/vscodium.list'
+	wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg
 	
 	##### Add Clipgrab
 	add-apt-repository -y ppa:clipgrab-team/ppa
@@ -134,7 +138,7 @@ else
 	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
 
 	##### Install PPAs
-	apt install -y albert brave-browser clipgrab code handbrake-cli handbrake-gtk libreoffice megasync opera-stable skypeforlinux  zeal #spotify-client fish postgresql postgresql-client pgadmin4 google-chrome-stable
+	apt install -y albert brave-browser clipgrab codium handbrake-cli handbrake-gtk libreoffice megasync opera-stable skypeforlinux  zeal #fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client
 	
 	##### Flatpak Apps
 	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
