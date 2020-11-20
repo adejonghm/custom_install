@@ -17,7 +17,7 @@
 
 
 ###### Setting variables
-export TDESKTOP_VERSION=2.4.5			# Telegram Desktop version https://desktop.telegram.org/
+export TDESKTOP_VERSION=2.4.7			# Telegram Desktop version https://desktop.telegram.org/
 export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreutils/?C=M;O=D
 
 
