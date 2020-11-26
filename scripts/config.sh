@@ -35,6 +35,17 @@ patch -p1 -i advcpmv-0.8-$CUTILS_VERSION.patch
 make
 
 
+##### Configure ZShell (Oh-My-Zsh)
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Powerlevel10k (download fonts from github and copy to ~/.local/share/fonts/)
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Configure fuzzy finder (Ubuntu 18.04) for Ubuntu 19.10+ use apt install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+
 ##### Copying files
 sudo -- sh -c 'mv -vf Telegram/ /opt/telegram-desktop/; ln -sf /opt/telegram-desktop/Telegram /usr/bin/telegram'
 
