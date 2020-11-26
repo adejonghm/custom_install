@@ -51,5 +51,3 @@ sudo -- sh -c 'mv -vf Telegram/ /opt/telegram-desktop/; ln -sf /opt/telegram-des
 
 sudo -- sh -c 'cp -vf src/cp /usr/bin/cp; cp -vf src/mv /usr/bin/mv'
 cd ../ && rm -rf coreutils-$CUTILS_VERSION/
-
-

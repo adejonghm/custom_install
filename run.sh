@@ -22,7 +22,7 @@ export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreut
 
 
 ###### Copying files into the HOME directory
-mv -v .conkyrc .vimrc .wakatime.cfg $HOME/
+mv -v .conkyrc .vimrc .wakatime.cfg .zshrc $HOME/
 mv -v templates/bash_template.sh templates/latex_cover_template.tex templates/python_template.py $HOME/Templates/
 
 

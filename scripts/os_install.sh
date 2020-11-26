@@ -117,7 +117,10 @@ else
 	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
 
 	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight w3m kid3 hardinfo pinta tilix xournal calibre zsh zsh-doc neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious #evince ctags vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y atool caca-utils poppler-utils mediainfo highlight w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious #evince ctags vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
+	
+	##### Install Zshell
+	apt install -y acpi autojump zsh zsh-doc
 
 	##### Install Dev-Tools and Apps
 	apt install -y libapache2-mod-php php$PHP_VERSION php$PHP_VERSION-{cli sqlite pgsql gd} python$PY_VERSION-dev python3-{pip doc} -y
