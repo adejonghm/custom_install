@@ -124,3 +124,4 @@ ${goto 5}Total Up: ${totalup wlan0}
 ${color 339900}${font Caviar Dreams:size=8}${alignr}Nombre Pc: ${nodename}
 #${color 339900}${font Caviar Dreams:size=8}${alignr}${pre_exec cat /etc/issue.net}  $machine
 ${color 339900}${font Caviar Dreams:size=8}${alignr}Kernel: ${kernel}
+
