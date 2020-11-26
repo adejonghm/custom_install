@@ -130,10 +130,37 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias rm='rm -vfi'
+alias cp='/usr/local/bin/cp -gR'
+alias mv='/usr/local/bin/mv -g'
+alias upd='sudo apt update'
+alias upg='sudo apt upgrade'
+alias rlan='ifconfig enp2s0'
+alias rwls='ifconfig wlp3s0'
+alias showls='sudo apt list --upgradable'
+alias dpkg-install='sudo dpkg -i'
+alias dpkg-purge='sudo dpkg -P'
+alias prs='ps aux | grep'
+alias kernelversion='uname -romi'
+alias linuxversion='lsb_release -a'
+alias zshconfig="vim ~/.zshrc"
+alias temp-info='watch -n 2 sensors'
+
+alias py='python3'
+alias tar-pack='tar -czvf'		# [..archivo a crear..] [..origen de la carpeta..]
+alias tar-umpack='tar -xzvf archivo.tar.gz'		# [..archivo a descomprimir..]
+### alias buscar-ip='for i in `seq 20 30`; do ping -c2 10.58.1.$i | egrep '(ttl|bytes)'; done'
+
+## SERVICES
+alias ufwstart='sudo ufw enable'
+alias ufwstop='sudo ufw disable'
+alias ufwrestart='sudo ufw disable; sudo ufw enable'
+alias ufwview='sudo ufw status numbered'
+
+alias sambastart='sudo i/etc/init.d/smbd start; sudo /etc/init.d/nmbd start'
+alias sambastop='sudo /etc/init.d/smbd stop; sudo /etc/init.d/nmbd stop'
+alias sambarestart='sudo /etc/init.d/smbd restart; sudo /etc/init.d/nmbd restart'
 
 
 # =========================
