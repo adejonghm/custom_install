@@ -149,6 +149,7 @@ alias kernelversion='uname -romi'
 alias linuxversion='lsb_release -a'
 alias zshconfig="vim ~/.zshrc"
 alias temp-info='watch -n 2 sensors'
+alias jup-notebook='cd /media/dejongh/Storage/Mega/Notebooks/; jupyter notebook'
 
 alias py='python3'
 alias tar-pack='tar -czvf'		# [..archivo a crear..] [..origen de la carpeta..]
