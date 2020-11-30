@@ -57,17 +57,13 @@ else
 	sh -c 'echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com stable main" > /etc/apt/sources.list.d/brave-browser-stable.list'
 	wget --quiet -O - https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key add -
 	
-	##### Add Google Chrome
-	#sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome-stable.list'
-	#wget -q -O -  https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-
 	##### Add MegaSync
 	sh -c 'echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/ ./" > /etc/apt/sources.list.d/megasync.list'
 	wget --quiet -O - https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/Release.key | apt-key add -
 	
 	##### Add Opera
-	sh -c 'echo "deb https://deb.opera.com/opera-stable/ stable non-free" > /etc/apt/sources.list.d/opera-browser-stable.list'
-	wget -q -O - https://deb.opera.com/archive.key | apt-key add -
+	# sh -c 'echo "deb https://deb.opera.com/opera-stable/ stable non-free" > /etc/apt/sources.list.d/opera-browser-stable.list'
+	# wget -q -O - https://deb.opera.com/archive.key | apt-key add -
 
 	##### Add Postgresql
 	#sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/postgresql-ubuntu-$(lsb_release -cs).list'
@@ -135,7 +131,7 @@ else
 	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
 
 	##### Install PPAs
-	apt install -y albert brave-browser clipgrab codium handbrake-cli handbrake-gtk libreoffice megasync opera-stable skypeforlinux  zeal #fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client
+	apt install -y albert brave-browser clipgrab code handbrake-cli handbrake-gtk libreoffice megasync skypeforlinux zeal #opera-stable fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client codium
 	
 	##### Install Flatpak Apps
 	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
