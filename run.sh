@@ -22,7 +22,7 @@ export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreut
 
 
 ###### Copying files into the HOME directory
-mv -v .conkyrc .vimrc .wakatime.cfg .zshrc .p10k.zsh $HOME/
+mv -v .conkyrc .vimrc .zshrc .p10k.zsh $HOME/
 mv -v templates/bash_template.sh templates/latex_cover_template.tex templates/python_template.py $HOME/Templates/
 
 
@@ -31,7 +31,7 @@ sudo bash scripts/os_install.sh
 
 
 ###### Python Installation
-pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour lxml
+pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour lxml pipenv
 
 
 ###### Configurations

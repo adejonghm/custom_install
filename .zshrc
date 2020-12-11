@@ -105,12 +105,21 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
+	autojump
 	battery
 	bgnotify
 	colored-man-pages
 	colorize
 	common-aliases
+	copydir
+	copyfile
+	dircycle
+	extract
+	git
+	gitignore
+	history
+	man
+	sudo
 )
 
 
@@ -132,8 +141,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 alias rm='rm -vf'
-alias cp='/usr/local/bin/cp -gR'
-alias mv='/usr/local/bin/mv -g'
+alias cp='cp -g'
+alias mv='mv -g'
 
 alias upd='sudo apt update'
 alias upg='sudo apt upgrade'
@@ -142,8 +151,8 @@ alias rmup='sudo apt autoclean; sudo apt autoremove'
 alias dpkg-install='sudo dpkg -i'
 alias dpkg-purge='sudo dpkg -P'
 
-alias rlan='ifconfig enp2s0'
-alias rwls='ifconfig wlp3s0'
+alias iflan='ifconfig enp2s0'
+alias ifwls='ifconfig wlp3s0'
 alias prs='ps aux | grep'
 alias kernelversion='uname -romi'
 alias linuxversion='lsb_release -a'

@@ -51,3 +51,34 @@ sudo -- sh -c 'mv -vf Telegram/ /opt/telegram-desktop/; ln -sf /opt/telegram-des
 
 sudo -- sh -c 'cp -vf src/cp /usr/bin/cp; cp -vf src/mv /usr/bin/mv'
 cd ../ && rm -rf coreutils-$CUTILS_VERSION/
+
+
+##### Configure wakatime.cfg
+touch ~/.wakatime.cfg
+echo "[settings]
+api_key = 
+include = 
+	$HOME/Github/master_code
+	$HOME/Github/first_blog
+	$HOME/Github/web_instec
+include_only_with_project_file = true
+status_bar_icon = true
+status_bar_enabled = true
+status_bar_coding_activity = true
+offline = true
+no_ssl_verify = false
+hostname = $(hostname)
+timeout = 15" > ~/.wakatime.cfg
+
+
+##### Configure Smb
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bck
+echo " 
+#### FOLDER SHARED ####
+[Download]
+	path=/media/$USER/Depot/Downloads/
+	writeable = yes
+	browseable = yes
+	read only = no
+	force user = $USER
+" >> /etc/samba/smb.conf
