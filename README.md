@@ -1,5 +1,5 @@
 
-# Installation script for Xubuntu 18.04
+# Installation script for Ubuntu XFCE
 
 ## How to Use
 
