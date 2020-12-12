@@ -78,7 +78,7 @@ else
 	# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
 	##### Add VSCode-Microsoft
-	sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode-stable.list'
+	sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 	wget --quiet -O - http://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 	##### Add VSCodium
