@@ -18,6 +18,9 @@ tar -xf tsetup.$TDESKTOP_VERSION.tar.xz
 rm -f tsetup.$TDESKTOP_VERSION.tar.xz
 
 
+##### Clipgrab
+
+
 ##### XFCE Globla Menu
 xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true

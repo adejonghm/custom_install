@@ -43,6 +43,7 @@ gem install neovim solargraph
 ###### Node Installation
 npm i -g bash-language-server neovim flow-language-server
 
+
 ###### Configurations
 bash scripts/config.sh
 

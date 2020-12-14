@@ -33,8 +33,9 @@ then
  	exit 1
 else
 	# ========= REMOVE OLD APPS ========= #
-	apt purge -y mousepad atril libreoffice-{base-core,calc,common,core,draw,gnome,gtk3,help-common,help-en-gb,help-en-us,impress,l10n-en-gb,l10n-en-za,math,style-colibre,style-elementary,style-tango,writer}
-
+	apt purge -y snapd mousepad atril libreoffice-{base-core,calc,common,core,draw,gnome,gtk3,help-common,help-en-gb,help-en-us,impress,l10n-en-gb,l10n-en-za,math,style-colibre,style-elementary,style-tango,writer}
+	
+	rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd
 
 	# ========= CLEANNIG STUFF ========= #
 	apt autoremove -y && sudo apt autoclean -y
@@ -46,25 +47,25 @@ else
 
 	# ========= INSTALL SECTION ========= #
 	##### Install system tools
-	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf
+	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf flatpak
 
 	##### Install network tools
 	apt install -y netcat iptraf traceroute net-tools nmap ntp ntpdate curl
 
 	##### Install some libraries
-	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
+	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash #firefox-globalmenu
 
 	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size chromium-browser chromium-ublock-origin #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size zeal #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
 	
 	##### Install Zshell
 	apt install -y acpi autojump zsh zsh-doc
 
 	##### Install Dev-Tools and Apps
-	apt install -y libapache2-mod-php php$PHP_V php$PHP_V-{cli,sqlite,pgsql,gd} python$PY_V-dev python3-{pip,doc} nodejs npm ruby
+	apt install -y libapache2-mod-php php$PHP_V php$PHP_V-{cli,sqlite3,pgsql,gd} python$PY_V-dev python3-{pip,doc} nodejs npm ruby
 
 	##### Install LaTeX
-	apt install -y texstudio texlive lmodern texlive-{base,formats-extra,pictures,pictures-doc,bibtex-extra,publishers,publishers-doc,science,science-doc,lang-{spanish,english,portuguese,other},font-{utils,extra,extra-doc,recommended,recommended-doc} generic-{recommended,extra}}
+	apt install -y texstudio texlive lmodern texlive-{base,formats-extra,pictures,pictures-doc,bibtex-extra,publishers,publishers-doc,science,science-doc,lang-{spanish,english,portuguese,other},font-utils,fonts-{extra,extra-doc,recommended,recommended-doc},latex-{recommended,extra}}
 
 	##### Install Eye-Candy
 	apt install -y faenza-icon-theme breeze-cursor-theme #papirus-icon-theme elementary-icon-theme
@@ -85,6 +86,9 @@ else
 	sh -c 'echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com stable main" > /etc/apt/sources.list.d/brave-browser-stable.list'
 	wget --quiet -O - https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key add -
 	
+	##### Add Chromium-Browser
+
+
 	##### Add MegaSync
 	sh -c 'echo "deb https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/ ./" > /etc/apt/sources.list.d/megasync.list'
 	wget --quiet -O - https://mega.nz/linux/MEGAsync/xUbuntu_$(lsb_release -rs)/Release.key | apt-key add -
@@ -113,9 +117,6 @@ else
 	# sh -c 'echo "deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/" > /etc/apt/sources.list.d/vscodium.list'
 	# wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg
 	
-	##### Add Clipgrab
-	add-apt-repository -y ppa:clipgrab-team/ppa
-	
 	##### Add Fish
 	# add-apt-repository -y ppa:fish-shell/release-3
 			
@@ -127,7 +128,7 @@ else
 
 
 	# ========= INSTALL FROM PPA ========= #
-	apt install -y albert brave-browser clipgrab code handbrake-cli handbrake-gtk libreoffice megasync skypeforlinux zeal #opera-stable fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client codium
+	apt install -y albert brave-browser  code handbrake-cli handbrake-gtk libreoffice megasync skypeforlinux #opera-stable fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client codium clipgrab
 
 fi
 
