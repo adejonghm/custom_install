@@ -10,10 +10,6 @@
 ##		e-mail: dejongh.cu@gmail.com
 ##		telegram: https://t.me/adejonghm
 ##
-##
-##	Before running this script, check the latest versions of PHP and Python 
-##	available in the official repositories to set the PHP_V and PY_V variables,
-##
 
 
 # =============== LEGEND =============== #
@@ -31,10 +27,6 @@
 #  nvim: ctags, clangd-10, silversearcher-ag, ripgrep, fzf, ncdu, luarocks
 
 
-PHP_V=7.4					# PHP version in official repositories.
-PY_V=3.8					# Pyhton version in official repositories.
-
-
 if [ "$UID" -ne "0" ]
 then
  	echo "This script must be run as root."
@@ -45,7 +37,7 @@ else
 
 
 	# ========= CLEANNIG STUFF ========= #
-	apt autoremove && sudo apt autoclean
+	apt autoremove -y && sudo apt autoclean -y
 
 
 	# ========= UPGRADE SYSTEM ========= #

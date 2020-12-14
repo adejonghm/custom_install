@@ -11,15 +11,17 @@
 ##		telegram: https://t.me/adejonghm
 ##
 ##
-##	Before running this script, check the latest version of Telegram Desktop
-##	and coreutils to set the TDESKTOP_VERSION and CUTILS_VERSION variables.
+##	Before running this script, check the latest version of Telegram Desktop, Coreutils,
+##  PHP and Python (available in the official repositories) to set the TDESKTOP_VERSION, 
+##  CUTILS_VERSION, PHP_V and PY_V variables.
 ##
 
 
 ###### Setting variables
 export TDESKTOP_VERSION=2.4.7			# Telegram Desktop version https://desktop.telegram.org/
 export CUTILS_VERSION=8.32				# coreutils version https://ftp.gnu.org/gnu/coreutils/?C=M;O=D
-
+export PHP_V=7.4                        # PHP version in official repositories.
+export PY_V=3.8                         # Pyhton version in official repositories.
 
 ###### Copying files into the HOME directory
 cp -v .conkyrc .vimrc .zshrc .p10k.zsh $HOME/
