@@ -3,8 +3,8 @@
 ##
 ##	Created by Alejandro de Jongh
 ##
-##  Ubuntu 18.04-based script with XFCE desktop environment to install  
-##  and configure the necessary software and packages in an automated way.
+##  Script to install all packages and configure the system in an automated way.
+##	It is based on Ubuntu 20.04 with XFCE as the desktop environment.
 ##
 ##	Contact:
 ##		e-mail: dejongh.cu@gmail.com
@@ -31,8 +31,26 @@ sudo bash scripts/os_install.sh
 
 
 ###### Python Installation
-pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour lxml pipenv
+pip3 install --user wheel pylint pylama uncompyle6 isort fuzzywuzzy requests cookiecutter pulsectl tzlocal pycountry bs4 overrides colour lxml pipenv pynvim neovim-remote autopep8
 
+
+###### Ruby Installation
+gem install neovim solargraph
+
+
+###### Node Installation
+npm i -g bash-language-server neovim flow-language-server
 
 ###### Configurations
 bash scripts/config.sh
+
+
+
+
+
+
+
+
+
+
+

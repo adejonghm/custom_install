@@ -3,8 +3,8 @@
 ##
 ##	Created by Alejandro de Jongh
 ##
-##  Ubuntu 18.04-based script with XFCE desktop environment to install  
-##  and configure the necessary software and packages in an automated way.
+##  Script to install all packages and configure the system in an automated way.
+##	It is based on Ubuntu 20.04 with XFCE as the desktop environment.
 ##
 ##	Contact:
 ##		e-mail: dejongh.cu@gmail.com
@@ -29,6 +29,7 @@
 #  xournal --> para resaltar texto PDF, poner firma (foto.png), etc....
 #  firefox-globalmenu --> biblioteca para que funcione el globalmenu en firefox
 #  coreutils --> library used by the new CP and MV command.
+#  nvim: ctags, clangd-10, silversearcher-ag, ripgrep, fzf, ncdu, luarocks
 
 
 PHP_VERSION=7.2					# PHP version in official repositories.
@@ -41,11 +42,43 @@ then
  	exit 1
 else
 	# ========= REMOVE OLD APPS ========= #
-	apt purge -y libreoffice* #atril
+	apt purge -y atril libreoffice*
 
 
 	# ========= CLEANNIG STUFF ========= #
-	apt autoclean && sudo apt autoremove
+	apt autoremove && sudo apt autoclean
+
+
+	# ========= INSTALL SECTION ========= #
+	##### Install system tools
+	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf #gedit-plugin-text-size
+
+	##### Install network tools
+	apt install -y netcat iptraf traceroute net-tools nmap ntp ntpdate curl
+
+	##### Install some libraries
+	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
+
+	##### Install App
+	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks #vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
+	
+	##### Install Zshell
+	apt install -y acpi autojump zsh zsh-doc
+
+	##### Install Dev-Tools and Apps
+	apt install -y libapache2-mod-php php$PHP_VERSION php$PHP_VERSION-{cli sqlite pgsql gd} python$PY_VERSION-dev python3-{pip doc} nodejs npm ruby
+
+	##### Install LaTeX
+	apt install -y texstudio texlive lmodern texlive-{base formats-extra pictures pictures-doc bibtex-extra publishers publishers-doc science science-doc lang-{spanish english portuguese other} font-{utils extra extra-doc recommended recommended-doc} generic-{recommended extra}}
+
+	##### Install Eye-Candy
+	apt install -y faenza-icon-theme breeze-cursor-theme #papirus-icon-theme elementary-icon-theme
+
+	##### Install XFCE libraries & Apps
+	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
+
+	##### Install Flatpak Apps
+	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
 
 
 	# ========= ADDING PPAs ========= #
@@ -102,39 +135,9 @@ else
 	apt upgrade -y
 
 
-	# ========= INSTALL SECTION ========= #
-	##### Install system tools
-	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf #gedit-plugin-text-size
-
-	##### Install network tools
-	apt install -y netcat iptraf traceroute net-tools nmap ntp ntpdate curl
-
-	##### Install some libraries
-	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
-
-	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince #ctags vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
-	
-	##### Install Zshell
-	apt install -y acpi autojump zsh zsh-doc
-
-	##### Install Dev-Tools and Apps
-	apt install -y libapache2-mod-php php$PHP_VERSION php$PHP_VERSION-{cli sqlite pgsql gd} python$PY_VERSION-dev python3-{pip doc} -y
-
-	##### Install LaTeX
-	apt install -y texstudio texlive lmodern texlive-{base formats-extra pictures pictures-doc bibtex-extra publishers publishers-doc science science-doc lang-{spanish english portuguese other} font-{utils extra extra-doc recommended recommended-doc} generic-{recommended extra}}
-
-	##### Install Eye-Candy
-	apt install -y faenza-icon-theme breeze-cursor-theme #papirus-icon-theme elementary-icon-theme
-
-	##### Install XFCE libraries & Apps
-	apt install -y xfce4-clipman xfce4-clipman-plugin xfce4-appmenu-plugin
-
-	##### Install PPAs
+	# ========= INSTALL FROM PPA ========= #
 	apt install -y albert brave-browser clipgrab code handbrake-cli handbrake-gtk libreoffice megasync skypeforlinux zeal #opera-stable fish google-chrome-stable postgresql postgresql-client pgadmin4 spotify-client codium
-	
-	##### Install Flatpak Apps
-	flatpak install flathub org.gimp.GIMP com.spotify.Client #org.kiwix.desktop
+
 fi
 
 
