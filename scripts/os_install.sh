@@ -12,8 +12,7 @@
 ##
 ##
 ##	Before running this script, check the latest versions of PHP and Python 
-##	available in the official repositories to set the PHP_VERSION and 
-##	PY_VERSION variables,
+##	available in the official repositories to set the PHP_V and PY_V variables,
 ##
 
 
@@ -32,8 +31,8 @@
 #  nvim: ctags, clangd-10, silversearcher-ag, ripgrep, fzf, ncdu, luarocks
 
 
-PHP_VERSION=7.2					# PHP version in official repositories.
-PY_VERSION=3.6					# Pyhton version in official repositories.
+PHP_V=7.4					# PHP version in official repositories.
+PY_V=3.8					# Pyhton version in official repositories.
 
 
 if [ "$UID" -ne "0" ]
@@ -42,16 +41,20 @@ then
  	exit 1
 else
 	# ========= REMOVE OLD APPS ========= #
-	apt purge -y atril libreoffice*
+	apt purge -y mousepad atril libreoffice-{base-core,calc,common,core,draw,gnome,gtk3,help-common,help-en-gb,help-en-us,impress,l10n-en-gb,l10n-en-za,math,style-colibre,style-elementary,style-tango,writer}
 
 
 	# ========= CLEANNIG STUFF ========= #
 	apt autoremove && sudo apt autoclean
 
 
+	# ========= UPGRADE SYSTEM ========= #
+	apt upgrade -y
+
+
 	# ========= INSTALL SECTION ========= #
 	##### Install system tools
-	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf #gedit-plugin-text-size
+	apt install -y cmake gcc g++ rar unrar unrar-free unace unace-nonfree zip unzip p7zip-full p7zip-rar bzip2 lzop gzip lzip samba htop neofetch ssh tree mc apache2 ffmpeg git sox exiftool httrack httrack-doc img2pdf
 
 	##### Install network tools
 	apt install -y netcat iptraf traceroute net-tools nmap ntp ntpdate curl
@@ -60,16 +63,16 @@ else
 	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
 
 	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks #vim vim-{addon-manager youcompleteme airline airline-themes syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
 	
 	##### Install Zshell
 	apt install -y acpi autojump zsh zsh-doc
 
 	##### Install Dev-Tools and Apps
-	apt install -y libapache2-mod-php php$PHP_VERSION php$PHP_VERSION-{cli sqlite pgsql gd} python$PY_VERSION-dev python3-{pip doc} nodejs npm ruby
+	apt install -y libapache2-mod-php php$PHP_V php$PHP_V-{cli,sqlite,pgsql,gd} python$PY_V-dev python3-{pip,doc} nodejs npm ruby
 
 	##### Install LaTeX
-	apt install -y texstudio texlive lmodern texlive-{base formats-extra pictures pictures-doc bibtex-extra publishers publishers-doc science science-doc lang-{spanish english portuguese other} font-{utils extra extra-doc recommended recommended-doc} generic-{recommended extra}}
+	apt install -y texstudio texlive lmodern texlive-{base,formats-extra,pictures,pictures-doc,bibtex-extra,publishers,publishers-doc,science,science-doc,lang-{spanish,english,portuguese,other},font-{utils,extra,extra-doc,recommended,recommended-doc} generic-{recommended,extra}}
 
 	##### Install Eye-Candy
 	apt install -y faenza-icon-theme breeze-cursor-theme #papirus-icon-theme elementary-icon-theme
@@ -129,10 +132,6 @@ else
 	
 	##### Add LibreOffice 7
 	add-apt-repository -y ppa:libreoffice/libreoffice-7-0
-
-
-	# ========= UPGRADE SYSTEM ========= #
-	apt upgrade -y
 
 
 	# ========= INSTALL FROM PPA ========= #

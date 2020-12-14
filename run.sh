@@ -45,6 +45,10 @@ npm i -g bash-language-server neovim flow-language-server
 bash scripts/config.sh
 
 
+###### Delete all
+rm -Rf $(pwd)
+
+
 
 
 
