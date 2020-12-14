@@ -55,7 +55,7 @@ else
 	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash firefox-globalmenu
 
 	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size chromium-browser chromium-ublock-origin #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
 	
 	##### Install Zshell
 	apt install -y acpi autojump zsh zsh-doc
