@@ -33,7 +33,7 @@ then
  	exit 1
 else
 	# ========= REMOVE OLD APPS ========= #
-	apt purge -y snapd mousepad atril libreoffice-{base-core,calc,common,core,draw,gnome,gtk3,help-common,help-en-gb,help-en-us,impress,l10n-en-gb,l10n-en-za,math,style-colibre,style-elementary,style-tango,writer}
+	apt purge -y snapd mousepad atril ristretto libreoffice-{base-core,calc,common,core,draw,gnome,gtk3,help-common,help-en-gb,help-en-us,impress,l10n-en-gb,l10n-en-za,math,style-colibre,style-elementary,style-tango,writer}
 	
 	rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd
 
@@ -56,7 +56,7 @@ else
 	apt install -y libjson-glib-dev libglib2.0-dev libpurple-dev libc-ares2 browser-plugin-freshplayer-pepperflash #firefox-globalmenu
 
 	##### Install App
-	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size zeal #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
+	apt install -y atool caca-utils poppler-utils mediainfo highlight simplescreenrecorder w3m kid3 hardinfo pinta tilix xournal calibre neovim ranger sqlite3 sqlite3-doc sqlitebrowser qbittorrent blueman audacity gparted gthumb vlc mpv audacious evince ctags clangd-10 silversearcher-ag ripgrep fzf ncdu luarocks gedit gedit-plugin-text-size zeal nomacs #vim vim-{addon-manager,youcompleteme,airline,airline-themes,syntax-gtk doc} remmina remmina-plugin-rdp
 	
 	##### Install Zshell
 	apt install -y acpi autojump zsh zsh-doc
